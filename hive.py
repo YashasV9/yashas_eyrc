@@ -7,6 +7,7 @@ print("connecting to broker ",broker)
 client.connect(broker)
 client.loop_start()
 gulbul_var = ""
-while True:
+while gulbul_var!='start':
     msg = subscribe.simple("yashasbigboi/1", hostname=broker)
     gulbul_var = str(msg.payload.decode("utf-8"))
+    print(gulbul_var)
